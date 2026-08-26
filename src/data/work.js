@@ -32,14 +32,11 @@ export const work = [
     tags: ['typescript', 'aws', 'event-driven'],
   },
   {
-    // Scaffold only — stays off the live site until the bracketed
-    // placeholders below are replaced and `draft` is removed.
-    draft: true,
     name: 'holm',
     url: 'https://holm.site',
-    context: 'BlackTagDevs · [one-word descriptor]',
-    body: '[2-3 sentences: what Holm is and my role on it]',
-    tags: ['[3-4 stack tags]'],
+    context: 'Real estate technology',
+    body: 'Full-stack development for Holm, a real-estate technology platform, spanning an Elixir/Phoenix GraphQL backend and a multi-app React/TypeScript frontend built on Turborepo. Work covered the admin, profile, and property surfaces against a PostgreSQL data layer, with Apollo Client handling data on the frontend.',
+    tags: ['elixir/phoenix', 'react/typescript', 'graphql', 'postgresql'],
   },
   {
     name: 'telecommunications',
