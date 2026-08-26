@@ -7,28 +7,28 @@
 export const work = [
   {
     name: 'fintech',
-    context: 'Consumer platform · ongoing',
-    body: "High-traffic consumer platform work: decomposing monolithic services into modular architectures, designing caching strategies for hot read paths, building authenticated partner integrations, and shaping BFF layers that serve web and mobile clients. The kind of systems where a bad deploy is a headline.",
+    context: 'Loyalty and rewards · web and mobile',
+    body: 'Loyalty and rewards for a major card issuer, across web and mobile. Breaking oversized services into smaller ones, caching the read paths that take the most traffic, building authenticated partner integrations, and shaping the BFF layer both clients run on.',
     tags: ['kotlin', 'java', 'jvm', 'react', 'redis', 'event-driven', 'distributed-systems', 'bff', 'github-actions', 'jenkins'],
   },
   {
     name: 'healthcare',
-    context: 'Care platform · ongoing',
-    body: 'Event-driven microservices for a healthcare platform — scheduling and coordination systems where reliability and auditability are table stakes. Designing event flows across streaming and queueing infrastructure, with type-safe persistence and services small enough to reason about.',
+    context: 'Telehealth product',
+    body: 'Event-driven microservices behind a telehealth product, handling scheduling and coordination across care teams. A dropped event here means someone misses an appointment, so the event flows across streaming and queueing infrastructure get a lot of attention, with type-safe persistence underneath.',
     tags: ['kotlin', 'java', 'aws', 'event-driven', 'kinesis', 'eventbridge', 'sqs', 'postgresql', 'sql', 'datadog'],
   },
   {
     name: 'rendezview',
     meta: '2025 — present',
-    context: 'BlackTag Devs · co-founder & CTO',
-    body: 'Finding good events is a discovery problem; planning them is a vendor problem. Rendezview handles both — AI-powered curation on one side, a vendor marketplace on the other. I own architecture and technical direction across a four-person studio: event-driven backend, invite-based beta onboarding with tiered access.',
+    context: 'BlackTagDevs · co-founder & CTO',
+    body: 'Rendezview helps people find events worth going to and plan the ones they host. AI curation on one side, a vendor marketplace on the other. I own architecture and technical direction across a four-person studio, from the event-driven backend to the invite-based beta with tiered access.',
     tags: ['typescript', 'aws', 'event-driven', 'ai'],
   },
   {
     name: 'backroom',
     url: 'https://www.bkrm.io',
-    context: 'BlackTag Devs · bkrm.io',
-    body: 'A private membership community for founders, decision-makers, and changemakers — curated events and intentional connection. One of the products I build as CTO of BlackTag Devs.',
+    context: 'BlackTagDevs · bkrm.io',
+    body: 'A private membership community for founders, decision-makers, and changemakers, built around curated events and intentional connection. One of the products I build as CTO at BlackTagDevs.',
     tags: ['typescript', 'aws', 'event-driven'],
   },
   {
@@ -36,16 +36,16 @@ export const work = [
     // placeholders below are replaced and `draft` is removed.
     draft: true,
     name: 'holm',
-    url: '[url if public]',
-    context: 'BlackTag Devs · [one-word descriptor]',
-    body: "[2-3 sentences: what Holm is and the builder's role]",
+    url: 'https://holm.site',
+    context: 'BlackTagDevs · [one-word descriptor]',
+    body: '[2-3 sentences: what Holm is and my role on it]',
     tags: ['[3-4 stack tags]'],
   },
   {
     name: 'telecommunications',
-    context: 'Data platform',
-    body: 'Data platform engineering for a devices organization: built ETL pipelines feeding warehouses across Azure, AWS, and Snowflake, streamed events through Kafka and Hadoop, and shipped internal React tooling that sped up the whole development loop. Supported device logistics end to end — procurement to provisioning, for fleets both on-site and online. Three warehouses, one source of truth.',
-    tags: ['java', 'kafka', 'hadoop', 'databricks', 'snowflake', 'azure', 'aws', 'terraform', 'react'],
+    context: 'Devices org · pipelines and internal tooling',
+    body: 'Worked in the data organization supporting a devices business. Built the ETL pipelines feeding warehouses across Azure, AWS, and Snowflake, moved events through Kafka and Hadoop, and shipped internal React tools that took a lot of friction out of the day to day. The work covered device logistics end to end, from procurement through provisioning, for fleets on-site and online.',
+    tags: ['java', 'python', 'kafka', 'hadoop', 'databricks', 'snowflake', 'azure', 'aws', 'terraform', 'react'],
   },
 ];
 

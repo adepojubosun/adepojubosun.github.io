@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { publishedSocials } from '../data/socials.js';
 
 interface Props {
   title: string;
@@ -19,6 +20,8 @@ const home = Astro.url.pathname === '/' ? '' : '/';
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
 <meta name="description" content={description}>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)}>
 <link rel="alternate" type="application/rss+xml" title="Bosun Adepoju" href={new URL('rss.xml', Astro.site)}>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,14 +45,11 @@ const home = Astro.url.pathname === '/' ? '' : '/';
 
   <footer id="contact">
     <p class="route-marker">/contact</p>
-    <p class="contact-line">The inbox is open — <a href="mailto:bosun@blacktagdevs.com">bosun@blacktagdevs.com</a></p>
+    <p class="contact-line">The inbox is open: <a href="mailto:bosun@blacktagdevs.com">bosun@blacktagdevs.com</a></p>
     <div class="socials">
-      <a href="https://github.com/adepojubosun" rel="me">github</a>
-      <a href="https://twitter.com/Boss__un" rel="me">twitter</a>
-      <a href="https://medium.com/@adepojuolatunbosun" rel="me">medium</a>
-      <a href="https://dev.to/adepojubosun" rel="me">dev.to</a>
+      {publishedSocials.map((link) => <a href={link.url} rel="me">{link.label}</a>)}
     </div>
-    <p class="colophon">built in atlanta · no trackers, no cookies, no nonsense</p>
+    <p class="colophon">built in atlanta · no trackers, no cookies</p>
   </footer>
 
 </div>
