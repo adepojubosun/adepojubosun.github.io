@@ -1,0 +1,122 @@
+---
+import Base from '../layouts/Base.astro';
+import EntryCard from '../components/EntryCard.astro';
+import { getPublishedWriting } from '../lib/writing.js';
+
+const latest = (await getPublishedWriting()).slice(0, 3);
+---
+<Base
+  title="Bosun Adepoju — I build things"
+  description="Senior software engineer shipping backend systems at scale. Co-founder and CTO of BlackTag Devs."
+>
+
+  <header id="top">
+    <p class="eyebrow"><span class="dot">●</span> atlanta, ga</p>
+    <h1>Bosun Adepoju</h1>
+    <p class="tagline"><span id="typed">I build things.</span><span class="cursor" aria-hidden="true"></span></p>
+    <p class="lede">Senior software engineer shipping backend systems at scale. Co-founder and CTO of BlackTag Devs, where we're building Rendezview.</p>
+    <p class="lede">Distributed systems, event-driven architecture, the JVM ecosystem — and whatever else the problem demands.</p>
+    <div class="hero-links">
+      <a href="#work">selected work ↓</a>
+      <a href="#contact">get in touch →</a>
+    </div>
+  </header>
+
+  <section id="work" class="reveal">
+    <p class="route-marker">/work</p>
+    <p class="section-sub">A few things I've built. Some anonymized — the work speaks either way.</p>
+
+    <article class="card">
+      <div class="card-head">
+        <span class="card-name">loyalty-platform-refactor</span>
+        <span class="card-meta">2025 — 2026</span>
+      </div>
+      <p class="card-context">Consumer fintech · 140M+ members</p>
+      <p class="body">A critical membership dashboard service had grown past 3,000 lines in a single verticle — every new feature raised risk and coupled unrelated domains. Led the decomposition into a feature-folder architecture, extracted prerequisite logic into its own service layer, introduced caching for hot loyalty reads, and built an HMAC-authenticated partner integration.</p>
+      <div class="tags">
+        <span class="tag">kotlin</span><span class="tag">vert.x</span><span class="tag">redis</span><span class="tag">bff</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <span class="card-name">assessment-scheduling-platform</span>
+        <span class="card-meta">2025 — 2026</span>
+      </div>
+      <p class="card-context">Behavioral health platform</p>
+      <p class="body">Clinical assessment scheduling across care teams — built on an event-driven architecture where reliability and auditability aren't nice-to-haves. Micronaut microservices in Kotlin and Java, type-safe persistence with jOOQ, event flow across EventBridge, Kinesis, and SQS.</p>
+      <div class="tags">
+        <span class="tag">micronaut</span><span class="tag">eventbridge</span><span class="tag">kinesis</span><span class="tag">jooq</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-head">
+        <span class="card-name">rendezview</span>
+        <span class="card-meta">2025 — present</span>
+      </div>
+      <p class="card-context">BlackTag Devs · co-founder &amp; CTO</p>
+      <p class="body">Finding good events is a discovery problem; planning them is a vendor problem. Rendezview handles both — AI-powered curation on one side, a vendor marketplace on the other. I own architecture and technical direction across a four-person studio: event-driven backend, invite-based beta onboarding with tiered access.</p>
+      <div class="tags">
+        <span class="tag">typescript</span><span class="tag">aws</span><span class="tag">event-driven</span><span class="tag">ai</span>
+      </div>
+    </article>
+  </section>
+
+  <section id="writing" class="reveal">
+    <p class="route-marker">/writing</p>
+    <p class="section-sub">Engineering notes from the intersection of scale and shipping.</p>
+    {latest.length === 0 ? (
+      <div class="empty-state">
+        <p><strong>First post ships September 2026.</strong> Writing every other week after that.</p>
+        <p>On the docket: backend systems at real scale, AI engineering that goes deeper than the hype, and what building a company teaches you about building software.</p>
+        <div class="tags">
+          <span class="tag">distributed systems</span><span class="tag">jvm</span><span class="tag">ai engineering</span><span class="tag">agentic tooling</span>
+        </div>
+      </div>
+    ) : (
+      <>
+        {latest.map((entry) => <EntryCard entry={entry} />)}
+        <div class="hero-links">
+          <a href="/writing/">all writing →</a>
+        </div>
+      </>
+    )}
+  </section>
+
+  <section id="now" class="reveal">
+    <p class="route-marker">/now</p>
+    <p class="section-sub">What has my attention right now.</p>
+    <ul class="now-list">
+      <li><span class="now-key">building</span><span class="now-val">Rendezview, with the BlackTag Devs team</span></li>
+      <li><span class="now-key">learning</span><span class="now-val">Product and customer development — talking to real users, not just shipping to them</span></li>
+      <li><span class="now-key">writing</span><span class="now-val">Standing up this site and a bi-weekly publishing habit</span></li>
+      <li><span class="now-key">training</span><span class="now-val">Lifting four days a week, boxing on Fridays</span></li>
+    </ul>
+    <p class="updated">last updated: august 2026</p>
+  </section>
+
+  <section id="uses" class="reveal">
+    <p class="route-marker">/uses</p>
+    <p class="section-sub">The setup, kept deliberately simple.</p>
+    <div class="uses-grid">
+      <div class="uses-item">
+        <p class="uses-label">machines</p>
+        <p>Linux tower on Pop!_OS for builds and personal projects. MacBook for everything portable.</p>
+      </div>
+      <div class="uses-item">
+        <p class="uses-label">stack</p>
+        <p>Kotlin &amp; Java on the JVM. TypeScript when the problem calls for it. Docker, Tailscale, WireGuard underneath.</p>
+      </div>
+      <div class="uses-item">
+        <p class="uses-label">ai tooling</p>
+        <p>Claude Code, heavily — custom MCP servers, agentic workflows, and opinions about both.</p>
+      </div>
+      <div class="uses-item">
+        <p class="uses-label">principles</p>
+        <p>Personal and work systems stay strictly separate. Boring infrastructure, interesting problems.</p>
+      </div>
+    </div>
+  </section>
+
+</Base>

@@ -1,0 +1,40 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { formatDate } from '../../lib/writing.js';
+
+export async function getStaticPaths() {
+  const posts = await getCollection(
+    'writing',
+    ({ data }) => data.draft !== true && data.format === 'post',
+  );
+  return posts.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const { title, description, pubDate, tags } = entry.data;
+---
+<Base title={`${title} — Bosun Adepoju`} description={description}>
+
+  <article class="post">
+    <p class="route-marker">/writing/{entry.id}</p>
+    <h1>{title}</h1>
+    <p class="post-meta">
+      <time datetime={pubDate.toISOString()}>{formatDate(pubDate)}</time>
+      {tags.map((tag) => (
+        <><span class="sep">·</span><span class="kw">{tag}</span></>
+      ))}
+    </p>
+
+    <div class="prose">
+      <Content />
+    </div>
+
+    <div class="hero-links">
+      <a href="/writing/">← all writing</a>
+      <a href="/#contact">get in touch →</a>
+    </div>
+  </article>
+
+</Base>

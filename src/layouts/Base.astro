@@ -1,0 +1,91 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+
+// On the landing page the nav anchors are plain fragments, exactly as in the
+// original markup. On any other page they have to travel home first.
+const home = Astro.url.pathname === '/' ? '' : '/';
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title}</title>
+<meta name="description" content={description}>
+<link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)}>
+<link rel="alternate" type="application/rss+xml" title="Bosun Adepoju" href={new URL('rss.xml', Astro.site)}>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="wrap">
+
+  <nav>
+    <a class="brand" href={`${home}#top`}>bosun adepoju</a>
+    <div class="routes">
+      <a href={`${home}#work`}>/work</a>
+      <a href={`${home}#writing`}>/writing</a>
+      <a href={`${home}#now`}>/now</a>
+    </div>
+  </nav>
+
+  <slot />
+
+  <footer id="contact">
+    <p class="route-marker">/contact</p>
+    <p class="contact-line">The inbox is open — <a href="mailto:bosun@blacktagdevs.com">bosun@blacktagdevs.com</a></p>
+    <div class="socials">
+      <a href="https://github.com/adepojubosun" rel="me">github</a>
+      <a href="https://twitter.com/Boss__un" rel="me">twitter</a>
+      <a href="https://medium.com/@adepojuolatunbosun" rel="me">medium</a>
+      <a href="https://dev.to/adepojubosun" rel="me">dev.to</a>
+    </div>
+    <p class="colophon">built in atlanta · no trackers, no cookies, no nonsense</p>
+  </footer>
+
+</div>
+
+<script is:inline>
+  (function () {
+    var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!reduced) {
+      var el = document.getElementById('typed');
+      if (el) {
+        var full = el.textContent;
+        el.textContent = '';
+        var i = 0;
+        var type = function () {
+          if (i <= full.length) {
+            el.textContent = full.slice(0, i);
+            i++;
+            setTimeout(type, 55);
+          }
+        };
+        setTimeout(type, 350);
+      }
+    }
+
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function (s) { obs.observe(s); });
+  })();
+</script>
+
+</body>
+</html>
