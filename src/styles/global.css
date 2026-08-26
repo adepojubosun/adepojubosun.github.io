@@ -229,6 +229,16 @@ a:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-ra
    Everything above is carried over verbatim from the original design.
    ========================================================================== */
 
+/* ---------- inline links in the hero ledes ---------- */
+.lede a {
+  color: var(--cyan);
+  text-decoration: none;
+  border-bottom: 1px solid var(--cyan-dim);
+  padding-bottom: 1px;
+  transition: border-color 0.15s ease;
+}
+.lede a:hover, .lede a:focus-visible { border-color: var(--cyan); }
+
 /* ---------- linked work card names ---------- */
 .card-name a {
   color: inherit;
@@ -390,5 +400,5 @@ a.card:hover .card-play { border-color: var(--cyan); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .card-play, .prose a, .card-name a { transition: none; }
+  .card-play, .prose a, .card-name a, .lede a { transition: none; }
 }

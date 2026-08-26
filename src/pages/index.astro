@@ -8,15 +8,15 @@ const latest = (await getPublishedWriting()).slice(0, 3);
 ---
 <Base
   title="Bosun Adepoju — I build things"
-  description="Senior software engineer and CTO of BlackTag Devs — systems at scale, products end to end."
+  description="Senior software engineer and CTO at BlackTagDevs. Systems at scale, products end to end."
 >
 
   <header id="top">
     <p class="eyebrow"><span class="dot">●</span> atlanta, ga</p>
     <h1>Bosun Adepoju</h1>
     <p class="tagline"><span id="typed">I build things.</span><span class="cursor" aria-hidden="true"></span></p>
-    <p class="lede">Senior software engineer shipping systems at scale. Co-founder and CTO of BlackTag Devs, where we're building Rendezview.</p>
-    <p class="lede">Distributed systems, event-driven architecture, product engineering across the stack — whatever the problem demands.</p>
+    <p class="lede">Senior software engineer. I work on systems that run at scale, and I'm co-founder and CTO at <a href="https://blacktagdevs.com" target="_blank" rel="noopener">BlackTagDevs</a>, where we're building Rendezview.</p>
+    <p class="lede">I work end to end, frontend to backend. Distributed systems, event-driven architecture, Python and AI tooling.</p>
     <div class="hero-links">
       <a href="#work">selected work ↓</a>
       <a href="#contact">get in touch →</a>
@@ -25,7 +25,7 @@ const latest = (await getPublishedWriting()).slice(0, 3);
 
   <section id="work" class="reveal">
     <p class="route-marker">/work</p>
-    <p class="section-sub">Current and past work. Some anonymized — the work speaks either way.</p>
+    <p class="section-sub">Current and past work.</p>
 
     {publishedWork.map((card) => (
       <article class="card">
@@ -48,11 +48,11 @@ const latest = (await getPublishedWriting()).slice(0, 3);
 
   <section id="writing" class="reveal">
     <p class="route-marker">/writing</p>
-    <p class="section-sub">Engineering notes from the intersection of scale and shipping.</p>
+    <p class="section-sub">Notes on building software at scale.</p>
     {latest.length === 0 ? (
       <div class="empty-state">
         <p><strong>First post ships September 2026.</strong> Writing every other week after that.</p>
-        <p>On the docket: systems at real scale, AI engineering that goes deeper than the hype, and what building a company teaches you about building software.</p>
+        <p>On the docket: systems at real scale, AI engineering past the hype, and what running a company teaches you about writing software.</p>
         <div class="tags">
           <span class="tag">distributed systems</span><span class="tag">jvm</span><span class="tag">ai engineering</span><span class="tag">agentic tooling</span>
         </div>
@@ -71,10 +71,11 @@ const latest = (await getPublishedWriting()).slice(0, 3);
     <p class="route-marker">/now</p>
     <p class="section-sub">What has my attention right now.</p>
     <ul class="now-list">
-      <li><span class="now-key">building</span><span class="now-val">Rendezview, with the BlackTag Devs team</span></li>
-      <li><span class="now-key">learning</span><span class="now-val">Product and customer development — talking to real users, not just shipping to them</span></li>
-      <li><span class="now-key">writing</span><span class="now-val">Standing up this site and a bi-weekly publishing habit</span></li>
-      <li><span class="now-key">training</span><span class="now-val">Lifting four days a week, boxing on Fridays</span></li>
+      <li><span class="now-key">building</span><span class="now-val">Rendezview, with the BlackTagDevs team</span></li>
+      <li><span class="now-key">learning</span><span class="now-val">Product and customer development. Talking to users instead of guessing what they want</span></li>
+      <li><span class="now-key">writing</span><span class="now-val">Getting this site up and building a bi-weekly habit</span></li>
+      <li><span class="now-key">fitness</span><span class="now-val">Lifting four days a week, boxing on Fridays, MMA most weekends</span></li>
+      <li><span class="now-key">off-hours</span><span class="now-val">Aviation, film and TV, and anything on health and longevity</span></li>
     </ul>
     <p class="updated">last updated: august 2026</p>
   </section>
@@ -89,15 +90,15 @@ const latest = (await getPublishedWriting()).slice(0, 3);
       </div>
       <div class="uses-item">
         <p class="uses-label">stack</p>
-        <p>Kotlin &amp; Java on the JVM. TypeScript when the problem calls for it. Docker, Tailscale, WireGuard underneath.</p>
+        <p>Kotlin and Java on the JVM. TypeScript and React on the front end. Python for AI work and anything that needs to move fast. Docker, Tailscale, WireGuard underneath.</p>
       </div>
       <div class="uses-item">
         <p class="uses-label">ai tooling</p>
-        <p>Claude Code, heavily — custom MCP servers, agentic workflows, and opinions about both.</p>
+        <p>Claude Code, heavily. Custom MCP servers, agentic workflows, and strong opinions about both.</p>
       </div>
       <div class="uses-item">
         <p class="uses-label">principles</p>
-        <p>Personal and work systems stay strictly separate. Boring infrastructure, interesting problems.</p>
+        <p>Personal and work systems stay strictly separate. I would rather the infrastructure be dull.</p>
       </div>
     </div>
   </section>
