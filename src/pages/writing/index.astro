@@ -1,0 +1,35 @@
+---
+import Base from '../../layouts/Base.astro';
+import EntryCard from '../../components/EntryCard.astro';
+import { getPublishedWriting } from '../../lib/writing.js';
+
+const entries = await getPublishedWriting();
+---
+<Base
+  title="Writing — Bosun Adepoju"
+  description="Engineering notes from the intersection of scale and shipping."
+>
+
+  <section class="reveal">
+    <p class="route-marker">/writing</p>
+    <p class="section-sub">Engineering notes from the intersection of scale and shipping.</p>
+
+    {entries.length === 0 ? (
+      <div class="empty-state">
+        <p><strong>First post ships September 2026.</strong> Writing every other week after that.</p>
+        <p>On the docket: backend systems at real scale, AI engineering that goes deeper than the hype, and what building a company teaches you about building software.</p>
+        <div class="tags">
+          <span class="tag">distributed systems</span><span class="tag">jvm</span><span class="tag">ai engineering</span><span class="tag">agentic tooling</span>
+        </div>
+      </div>
+    ) : (
+      entries.map((entry) => <EntryCard entry={entry} />)
+    )}
+
+    <div class="hero-links">
+      <a href="/">← back home</a>
+      <a href="/rss.xml">rss →</a>
+    </div>
+  </section>
+
+</Base>
