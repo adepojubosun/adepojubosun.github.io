@@ -34,8 +34,8 @@ export const work = [
   {
     name: 'holm',
     url: 'https://holm.site',
-    context: 'Real estate technology',
-    body: 'Real estate software, worked end to end. Elixir and Phoenix serving GraphQL on one side, a handful of React apps sharing a Turborepo on the other. I built the admin tooling, the profile flows, and the property pages, which meant living in both halves of the stack most days.',
+    context: 'Link-in-bio product',
+    body: 'Holm gives you one page to point people at, in the same vein as Linktree. Phoenix and GraphQL underneath, a set of React apps sharing a Turborepo on top. I worked both halves: the profile pages people publish and the admin tooling behind them.',
     tags: ['elixir/phoenix', 'react/typescript', 'graphql', 'postgresql'],
   },
   {
