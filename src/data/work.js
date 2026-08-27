@@ -9,13 +9,13 @@ export const work = [
     name: 'Fintech',
     context: 'consumer fintech · web and mobile',
     body: "High-traffic consumer systems on web and mobile: a dozen critical APIs serving 3M+ requests a day. The interesting problems are read paths under load: caching strategy, prefetch, circuit breakers, and a BFF layer shaped to what each client actually needs. I also led a legacy monolith's decomposition into microservices: phased, 99% of known vulnerabilities resolved, zero downtime.",
-    tags: ['kotlin', 'java', 'jvm', 'react', 'redis', 'event-driven', 'distributed-systems', 'bff', 'github-actions', 'jenkins'],
+    tags: ['kotlin', 'java', 'vert.x', 'react', 'redis', 'caching', 'oauth2', 'bff', 'github-actions', 'jenkins'],
   },
   {
     name: 'Healthcare',
     context: 'telehealth platform · web and mobile',
-    body: 'Scheduling and coordination for a telehealth product, running on event-driven microservices. A lost event here means a patient misses an appointment, so delivery guarantees and audit trails get more of my attention than raw throughput.',
-    tags: ['kotlin', 'java', 'aws', 'event-driven', 'kinesis', 'eventbridge', 'sqs', 'postgresql', 'sql', 'datadog'],
+    body: 'Engineering across a telehealth platform, from care workflows to the assessment scheduling system I built, on event-driven microservices. A lost event can mean a patient misses care, so delivery guarantees and audit trails get more attention than raw throughput.',
+    tags: ['kotlin', 'java', 'aws', 'kinesis', 'eventbridge', 'sqs', 'postgresql', 'datadog'],
   },
   {
     name: 'Telecommunications',
