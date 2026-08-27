@@ -9,16 +9,23 @@ export const work = [
     name: 'Fintech',
     context: 'consumer fintech · web and mobile',
     body: "High-traffic consumer systems on web and mobile: a dozen critical APIs serving 3M+ requests a day. The interesting problems are read paths under load: caching strategy, prefetch, circuit breakers, and a BFF layer shaped to what each client actually needs. I also led a legacy monolith's decomposition into microservices: phased, 99% of known vulnerabilities resolved, zero downtime.",
-    tags: ['kotlin', 'java', 'jvm', 'react', 'redis', 'event-driven', 'distributed-systems', 'bff', 'github-actions', 'jenkins'],
+    tags: ['kotlin', 'java', 'vert.x', 'react', 'redis', 'caching', 'oauth2', 'bff', 'github-actions', 'jenkins'],
   },
   {
     name: 'Healthcare',
     context: 'telehealth platform · web and mobile',
-    body: 'Scheduling and coordination for a telehealth product, running on event-driven microservices. A lost event here means a patient misses an appointment, so delivery guarantees and audit trails get more of my attention than raw throughput.',
-    tags: ['kotlin', 'java', 'aws', 'event-driven', 'kinesis', 'eventbridge', 'sqs', 'postgresql', 'sql', 'datadog'],
+    body: 'Engineering across a telehealth platform, from care workflows to the assessment scheduling system I built, on event-driven microservices. A lost event can mean a patient misses care, so delivery guarantees and audit trails get more attention than raw throughput.',
+    tags: ['kotlin', 'java', 'aws', 'kinesis', 'eventbridge', 'sqs', 'postgresql', 'datadog'],
+  },
+  {
+    name: 'Telecommunications',
+    context: 'devices org · data platform',
+    body: 'Data work for a devices business, tracking hardware from purchase order to the moment it reaches someone\'s desk. I built the pipelines feeding warehouses across three clouds, and the internal React tools the logistics teams lived in day to day.',
+    tags: ['java', 'python', 'kafka', 'hadoop', 'databricks', 'snowflake', 'azure', 'aws', 'terraform', 'react'],
   },
   {
     name: 'Rendezview',
+    url: 'https://rendezview.app',
     context: 'blacktagdevs · co-founder & cto',
     body: 'Rendezview helps you find events worth your time, then helps you pull off the ones you host yourself. AI curation on one side, a vendor marketplace on the other. I set technical direction for a four-person team and build most of the backend, including the tiered invite system behind the beta.',
     tags: ['typescript', 'aws', 'event-driven', 'ai'],
@@ -36,12 +43,6 @@ export const work = [
     context: 'blacktagdevs · link-in-bio product',
     body: 'Holm gives you one page to point people at, in the same vein as Linktree. Phoenix and GraphQL underneath, a set of React apps sharing a Turborepo on top. I worked both halves: the profile pages people publish and the admin tooling behind them.',
     tags: ['elixir/phoenix', 'react/typescript', 'graphql', 'postgresql'],
-  },
-  {
-    name: 'Telecommunications',
-    context: 'devices org · data platform',
-    body: 'Data work for a devices business, tracking hardware from purchase order to the moment it reaches someone\'s desk. I built the pipelines feeding warehouses across three clouds, and the internal React tools the logistics teams lived in day to day.',
-    tags: ['java', 'python', 'kafka', 'hadoop', 'databricks', 'snowflake', 'azure', 'aws', 'terraform', 'react'],
   },
 ];
 
