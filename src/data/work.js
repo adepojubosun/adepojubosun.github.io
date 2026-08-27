@@ -18,6 +18,12 @@ export const work = [
     tags: ['kotlin', 'java', 'aws', 'event-driven', 'kinesis', 'eventbridge', 'sqs', 'postgresql', 'sql', 'datadog'],
   },
   {
+    name: 'Telecommunications',
+    context: 'devices org · data platform',
+    body: 'Data work for a devices business, tracking hardware from purchase order to the moment it reaches someone\'s desk. I built the pipelines feeding warehouses across three clouds, and the internal React tools the logistics teams lived in day to day.',
+    tags: ['java', 'python', 'kafka', 'hadoop', 'databricks', 'snowflake', 'azure', 'aws', 'terraform', 'react'],
+  },
+  {
     name: 'Rendezview',
     url: 'https://rendezview.app',
     context: 'blacktagdevs · co-founder & cto',
@@ -37,12 +43,6 @@ export const work = [
     context: 'blacktagdevs · link-in-bio product',
     body: 'Holm gives you one page to point people at, in the same vein as Linktree. Phoenix and GraphQL underneath, a set of React apps sharing a Turborepo on top. I worked both halves: the profile pages people publish and the admin tooling behind them.',
     tags: ['elixir/phoenix', 'react/typescript', 'graphql', 'postgresql'],
-  },
-  {
-    name: 'Telecommunications',
-    context: 'devices org · data platform',
-    body: 'Data work for a devices business, tracking hardware from purchase order to the moment it reaches someone\'s desk. I built the pipelines feeding warehouses across three clouds, and the internal React tools the logistics teams lived in day to day.',
-    tags: ['java', 'python', 'kafka', 'hadoop', 'databricks', 'snowflake', 'azure', 'aws', 'terraform', 'react'],
   },
 ];
 
