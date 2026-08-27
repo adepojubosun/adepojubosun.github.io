@@ -3,20 +3,21 @@ import Base from '../layouts/Base.astro';
 import EntryCard from '../components/EntryCard.astro';
 import { getPublishedWriting } from '../lib/writing.js';
 import { publishedWork } from '../data/work.js';
+import { publishedNow } from '../data/now.js';
 
 const latest = (await getPublishedWriting()).slice(0, 3);
 ---
 <Base
   title="Bosun Adepoju — I build things"
-  description="Senior software engineer and CTO at BlackTagDevs. Systems at scale, products end to end."
+  description="Senior software engineer and CTO at BlackTagDevs. Multiple industries, one habit: solving the problem."
 >
 
   <header id="top">
     <p class="eyebrow"><span class="dot">●</span> atlanta, ga</p>
     <h1>Bosun Adepoju</h1>
     <p class="tagline"><span id="typed">I build things.</span><span class="cursor" aria-hidden="true"></span></p>
-    <p class="lede">Senior software engineer. I work on systems that run at scale, and I'm co-founder and CTO at <a href="https://blacktagdevs.com" target="_blank" rel="noopener">BlackTagDevs</a>, where we're building Rendezview.</p>
-    <p class="lede">Frontend through backend, with most of my time in distributed and event-driven systems. Lately a lot of AI tooling too.</p>
+    <p class="lede">Senior software engineer, and co-founder &amp; CTO at <a href="https://blacktagdevs.com" target="_blank" rel="noopener">BlackTagDevs</a>. Deep in computing systems and product development — fluent across everything around them.</p>
+    <p class="lede">I've shipped in fintech, healthcare, telecom, and consumer products, lately with a lot of AI engineering in the mix. The common thread is the problem, not the stack.</p>
     <div class="hero-links">
       <a href="#work">selected work ↓</a>
       <a href="#contact">get in touch →</a>
@@ -37,7 +38,7 @@ const latest = (await getPublishedWriting()).slice(0, 3);
           </span>
           {card.meta && <span class="card-meta">{card.meta}</span>}
         </div>
-        <p class="card-context">{card.context}</p>
+        <p class="card-context mono">{card.context}</p>
         <p class="body">{card.body}</p>
         <div class="tags">
           {card.tags.map((tag) => <span class="tag">{tag}</span>)}
@@ -52,7 +53,7 @@ const latest = (await getPublishedWriting()).slice(0, 3);
     {latest.length === 0 ? (
       <div class="empty-state">
         <p><strong>First post ships September 2026.</strong> Writing every other week after that.</p>
-        <p>On the docket: systems at real scale, AI engineering past the hype, and what running a company teaches you about writing software.</p>
+        <p>On the docket: systems at real scale, AI engineering past the hype, what running a company teaches you about writing software — and the occasional detour into whatever I'm watching, training for, or flying.</p>
         <div class="tags">
           <span class="tag">distributed systems</span><span class="tag">jvm</span><span class="tag">ai engineering</span><span class="tag">agentic tooling</span>
         </div>
@@ -71,11 +72,9 @@ const latest = (await getPublishedWriting()).slice(0, 3);
     <p class="route-marker">/now</p>
     <p class="section-sub">What has my attention right now.</p>
     <ul class="now-list">
-      <li><span class="now-key">building</span><span class="now-val">Rendezview, with the BlackTagDevs team</span></li>
-      <li><span class="now-key">learning</span><span class="now-val">Product and customer development. Learning to ask users questions instead of answering them for myself</span></li>
-      <li><span class="now-key">writing</span><span class="now-val">Getting this site up and building a bi-weekly habit</span></li>
-      <li><span class="now-key">fitness</span><span class="now-val">Lifting four days a week and boxing on Fridays. I follow MMA closely enough to have opinions</span></li>
-      <li><span class="now-key">off-hours</span><span class="now-val">Aviation, film, and long television. Reading about health and living longer</span></li>
+      {publishedNow.map((row) => (
+        <li><span class="now-key">{row.key}</span><span class="now-val">{row.value}</span></li>
+      ))}
     </ul>
     <p class="updated">last updated: august 2026</p>
   </section>
