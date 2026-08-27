@@ -15,7 +15,7 @@ const { entry } = Astro.props;
 const { Content } = await render(entry);
 const { title, description, pubDate, tags } = entry.data;
 ---
-<Base title={`${title} — Bosun Adepoju`} description={description}>
+<Base title={`Bosun Adepoju: ${title}`} description={description}>
 
   <article class="post">
     <p class="route-marker">/content/{entry.id}</p>

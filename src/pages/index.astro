@@ -4,11 +4,12 @@ import EntryCard from '../components/EntryCard.astro';
 import { getPublishedWriting } from '../lib/writing.js';
 import { publishedWork } from '../data/work.js';
 import { publishedNow } from '../data/now.js';
+import { uses } from '../data/uses.js';
 
 const latest = (await getPublishedWriting()).slice(0, 3);
 ---
 <Base
-  title="Bosun Adepoju — I build things"
+  title="Bosun Adepoju: I build things"
   description="Senior software engineer and CTO at BlackTagDevs. Multiple industries, one habit: solving the problem."
 >
 
@@ -16,8 +17,8 @@ const latest = (await getPublishedWriting()).slice(0, 3);
     <p class="eyebrow"><span class="dot">●</span> atlanta, ga</p>
     <h1>Bosun Adepoju</h1>
     <p class="tagline"><span id="typed">I build things.</span><span class="cursor" aria-hidden="true"></span></p>
-    <p class="lede">Senior software engineer, and co-founder &amp; CTO at <a href="https://blacktagdevs.com" target="_blank" rel="noopener">BlackTagDevs</a>. Deep in computing systems and product development — fluent across everything around them.</p>
-    <p class="lede">I've shipped in fintech, healthcare, telecom, and consumer products, lately with a lot of AI engineering in the mix. The common thread is the problem, not the stack.</p>
+    <p class="lede">Senior software engineer, and co-founder &amp; CTO at <a href="https://blacktagdevs.com" target="_blank" rel="noopener">BlackTagDevs</a>. Deep in computing systems and product development, fluent across everything around them.</p>
+    <p class="lede">I've shipped in fintech, healthcare, telecom, and consumer products, lately with a lot of AI engineering in the mix.</p>
     <div class="hero-links">
       <a href="#work">selected work ↓</a>
       <a href="#contact">get in touch →</a>
@@ -52,8 +53,8 @@ const latest = (await getPublishedWriting()).slice(0, 3);
     <p class="section-sub">Writing and video on building software at scale.</p>
     {latest.length === 0 ? (
       <div class="empty-state">
-        <p><strong>First post ships September 2026.</strong> New writing every other week; video when it's ready.</p>
-        <p>Topics: systems at scale, AI engineering, building products — and film, aviation, and whatever else, at random.</p>
+        <p><strong>First post ships September 2026.</strong> New writing every other week, video when it's ready.</p>
+        <p>Topics: systems at scale, AI engineering, building products, plus film, aviation, and whatever else at random.</p>
         <div class="tags">
           <span class="tag">distributed systems</span><span class="tag">jvm</span><span class="tag">ai engineering</span><span class="tag">agentic tooling</span>
         </div>
@@ -81,24 +82,14 @@ const latest = (await getPublishedWriting()).slice(0, 3);
 
   <section id="uses" class="reveal">
     <p class="route-marker">/uses</p>
-    <p class="section-sub">The setup, kept deliberately simple.</p>
+    <p class="section-sub">What I work with.</p>
     <div class="uses-grid">
-      <div class="uses-item">
-        <p class="uses-label">machines</p>
-        <p>Linux tower on Pop!_OS for builds and personal projects. MacBook for everything portable.</p>
-      </div>
-      <div class="uses-item">
-        <p class="uses-label">stack</p>
-        <p>Kotlin and Java on the JVM. TypeScript and React on the front end. Python for AI work and anything that needs to move fast. Docker, Tailscale, WireGuard underneath.</p>
-      </div>
-      <div class="uses-item">
-        <p class="uses-label">ai tooling</p>
-        <p>Claude Code, heavily. Custom MCP servers, agentic workflows, and strong opinions about both.</p>
-      </div>
-      <div class="uses-item">
-        <p class="uses-label">principles</p>
-        <p>Personal and work systems stay strictly separate. I would rather the infrastructure be dull.</p>
-      </div>
+      {uses.map((item) => (
+        <div class="uses-item">
+          <p class="uses-label">{item.label}</p>
+          <p>{item.body}</p>
+        </div>
+      ))}
     </div>
   </section>
 
