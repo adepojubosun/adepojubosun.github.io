@@ -8,12 +8,12 @@ export const work = [
   {
     name: 'Fintech',
     context: 'consumer fintech · web and mobile',
-    body: 'High-traffic consumer systems on web and mobile — a dozen critical APIs serving 3M+ requests a day. Most of the job is untangling services that grew too large, keeping read paths fast when everyone hits them at once, and building the partner integrations and the BFF layer both apps sit on. One highlight: a legacy monolith modernized into microservices, 99% of known vulnerabilities resolved, zero downtime.',
+    body: 'High-traffic consumer systems on web and mobile: a dozen critical APIs serving 3M+ requests a day. Most of the job is untangling services that grew too large, keeping read paths fast when everyone hits them at once, and building the partner integrations and the BFF layer both apps sit on. One highlight: a legacy monolith modernized into microservices, 99% of known vulnerabilities resolved, zero downtime.',
     tags: ['kotlin', 'java', 'jvm', 'react', 'redis', 'event-driven', 'distributed-systems', 'bff', 'github-actions', 'jenkins'],
   },
   {
     name: 'Healthcare',
-    context: 'telehealth platform',
+    context: 'telehealth platform · web and mobile',
     body: 'Scheduling and coordination for a telehealth product, running on event-driven microservices. A lost event here means a patient misses an appointment, so delivery guarantees and audit trails get more of my attention than raw throughput.',
     tags: ['kotlin', 'java', 'aws', 'event-driven', 'kinesis', 'eventbridge', 'sqs', 'postgresql', 'sql', 'datadog'],
   },
@@ -33,7 +33,7 @@ export const work = [
   {
     name: 'Holm',
     url: 'https://holm.site',
-    context: 'link-in-bio product',
+    context: 'blacktagdevs · link-in-bio product',
     body: 'Holm gives you one page to point people at, in the same vein as Linktree. Phoenix and GraphQL underneath, a set of React apps sharing a Turborepo on top. I worked both halves: the profile pages people publish and the admin tooling behind them.',
     tags: ['elixir/phoenix', 'react/typescript', 'graphql', 'postgresql'],
   },
