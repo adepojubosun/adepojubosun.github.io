@@ -18,7 +18,7 @@ const { title, description, pubDate, tags } = entry.data;
 <Base title={`${title} — Bosun Adepoju`} description={description}>
 
   <article class="post">
-    <p class="route-marker">/writing/{entry.id}</p>
+    <p class="route-marker">/content/{entry.id}</p>
     <h1>{title}</h1>
     <p class="post-meta">
       <time datetime={pubDate.toISOString()}>{formatDate(pubDate)}</time>
@@ -32,7 +32,7 @@ const { title, description, pubDate, tags } = entry.data;
     </div>
 
     <div class="hero-links">
-      <a href="/writing/">← all writing</a>
+      <a href="/content/">← all content</a>
       <a href="/#contact">get in touch →</a>
     </div>
   </article>
