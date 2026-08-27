@@ -8,7 +8,7 @@ export const work = [
   {
     name: 'Fintech',
     context: 'consumer fintech · web and mobile',
-    body: 'High-traffic consumer systems on web and mobile: a dozen critical APIs serving 3M+ requests a day. Most of the job is untangling services that grew too large, keeping read paths fast when everyone hits them at once, and building the partner integrations and the BFF layer both apps sit on. One highlight: a legacy monolith modernized into microservices, 99% of known vulnerabilities resolved, zero downtime.',
+    body: "High-traffic consumer systems on web and mobile: a dozen critical APIs serving 3M+ requests a day. The interesting problems are read paths under load: caching strategy, prefetch, circuit breakers, and a BFF layer shaped to what each client actually needs. I also led a legacy monolith's decomposition into microservices: phased, 99% of known vulnerabilities resolved, zero downtime.",
     tags: ['kotlin', 'java', 'jvm', 'react', 'redis', 'event-driven', 'distributed-systems', 'bff', 'github-actions', 'jenkins'],
   },
   {
