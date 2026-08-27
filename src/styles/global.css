@@ -78,7 +78,7 @@ h1 {
   animation: blink 1.1s steps(1) infinite;
 }
 @keyframes blink { 50% { opacity: 0; } }
-.lede { color: var(--fog); max-width: 580px; }
+.lede { color: var(--fog); max-width: 62ch; }
 .lede + .lede { margin-top: 14px; color: var(--slate); }
 .hero-links { display: flex; gap: 18px; margin-top: 32px; flex-wrap: wrap; }
 .hero-links a {
@@ -108,7 +108,7 @@ section { padding: 56px 0; }
   color: var(--slate);
   font-size: 15px;
   margin-bottom: 36px;
-  max-width: 540px;
+  max-width: 62ch;
 }
 
 /* ---------- work cards ---------- */
@@ -130,14 +130,17 @@ section { padding: 56px 0; }
   flex-wrap: wrap;
 }
 .card-name {
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-size: 15px;
   font-weight: 500;
   color: var(--fog);
 }
 .card-meta { font-family: var(--mono); font-size: 12px; color: var(--slate); }
 .card-context { font-size: 14px; color: var(--slate); margin-bottom: 14px; }
-.card p.body { font-size: 15px; line-height: 1.65; margin-bottom: 16px; }
+/* work cards only: the context line is machine voice. Writing cards reuse
+   .card-context for a description sentence, which stays in the sans. */
+.card-context.mono { font-family: var(--mono); }
+.card p.body { font-size: 15px; line-height: 1.65; margin-bottom: 16px; max-width: 62ch; }
 .tags { display: flex; gap: 8px; flex-wrap: wrap; }
 .tag {
   font-family: var(--mono);
