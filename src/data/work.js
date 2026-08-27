@@ -19,6 +19,7 @@ export const work = [
   },
   {
     name: 'Rendezview',
+    url: 'https://rendezview.app',
     context: 'blacktagdevs · co-founder & cto',
     body: 'Rendezview helps you find events worth your time, then helps you pull off the ones you host yourself. AI curation on one side, a vendor marketplace on the other. I set technical direction for a four-person team and build most of the backend, including the tiered invite system behind the beta.',
     tags: ['typescript', 'aws', 'event-driven', 'ai'],
