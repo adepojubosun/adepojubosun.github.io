@@ -20,5 +20,5 @@ export function formatDate(date) {
 
 /** Where an entry points: posts get a page, videos link straight out. */
 export function entryHref(entry) {
-  return entry.data.format === 'video' ? entry.data.videoUrl : `/writing/${entry.id}/`;
+  return entry.data.format === 'video' ? entry.data.videoUrl : `/content/${entry.id}/`;
 }

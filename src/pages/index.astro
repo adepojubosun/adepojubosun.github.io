@@ -47,13 +47,13 @@ const latest = (await getPublishedWriting()).slice(0, 3);
     ))}
   </section>
 
-  <section id="writing" class="reveal">
-    <p class="route-marker">/writing</p>
-    <p class="section-sub">Notes on building software at scale.</p>
+  <section id="content" class="reveal">
+    <p class="route-marker">/content</p>
+    <p class="section-sub">Writing and video on building software at scale.</p>
     {latest.length === 0 ? (
       <div class="empty-state">
-        <p><strong>First post ships September 2026.</strong> Writing every other week after that.</p>
-        <p>On the docket: systems at real scale, AI engineering past the hype, what running a company teaches you about writing software — and the occasional detour into whatever I'm watching, training for, or flying.</p>
+        <p><strong>First post ships September 2026.</strong> New writing every other week; video when it's ready.</p>
+        <p>Topics: systems at scale, AI engineering, building products — and film, aviation, and whatever else, at random.</p>
         <div class="tags">
           <span class="tag">distributed systems</span><span class="tag">jvm</span><span class="tag">ai engineering</span><span class="tag">agentic tooling</span>
         </div>
@@ -62,7 +62,7 @@ const latest = (await getPublishedWriting()).slice(0, 3);
       <>
         {latest.map((entry) => <EntryCard entry={entry} />)}
         <div class="hero-links">
-          <a href="/writing/">all writing →</a>
+          <a href="/content/">all content →</a>
         </div>
       </>
     )}
