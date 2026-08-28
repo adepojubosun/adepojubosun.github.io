@@ -75,7 +75,7 @@ to the archive. No edit needed when the first post ships.
 
 ## Deploying
 
-Pushing to `master` (or `main`) runs `.github/workflows/deploy.yml`, which
+Pushing to `main` runs `.github/workflows/deploy.yml`, which
 builds with `withastro/action` and publishes to GitHub Pages.
 
 Two settings this depends on:
