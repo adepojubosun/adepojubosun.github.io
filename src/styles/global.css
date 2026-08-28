@@ -183,7 +183,10 @@ section { padding: 56px 0; }
 .updated { font-family: var(--mono); font-size: 12px; color: var(--slate); margin-top: 20px; }
 
 /* ---------- uses ---------- */
-.uses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+/* min(280px, 100%) rather than a bare 280px: a bare minimum track stays
+   280px wide even when the container is narrower, which pushed the grid
+   past the viewport on 280px-wide screens (Galaxy Fold, outer display). */
+.uses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 14px; }
 .uses-item {
   background: var(--panel);
   border: 1px solid var(--border);
