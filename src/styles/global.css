@@ -27,6 +27,11 @@ nav {
   justify-content: space-between;
   align-items: baseline;
   padding: 32px 0;
+  /* Wrap rather than overflow: below ~260px the brand and the routes no
+     longer fit on one line. space-between keeps the gap inert at normal
+     widths, where nothing wraps. */
+  flex-wrap: wrap;
+  gap: 8px 16px;
 }
 nav .brand {
   font-family: var(--mono);
@@ -35,7 +40,7 @@ nav .brand {
   text-decoration: none;
   font-weight: 500;
 }
-nav .routes { display: flex; gap: 20px; }
+nav .routes { display: flex; flex-wrap: wrap; gap: 8px 20px; }
 nav .routes a {
   font-family: var(--mono);
   font-size: 13px;
