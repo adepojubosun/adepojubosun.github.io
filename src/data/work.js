@@ -8,7 +8,7 @@ export const work = [
   {
     name: 'Fintech',
     context: 'consumer fintech · web and mobile',
-    body: 'Consumer systems on web and mobile: a dozen critical APIs serving 3M+ requests a day. Caching, prefetch, and circuit breakers keep them fast when traffic spikes, and a BFF layer feeds each client what it needs. I led the decomposition of a legacy monolith into microservices: phased, 99% of known vulnerabilities fixed, zero downtime.',
+    body: 'Consumer systems on web and mobile: a dozen critical APIs serving 3M+ requests a day. Caching, prefetch, and circuit breakers keep them fast when traffic spikes, and a BFF layer feeds each client what it needs. I led the decomposition of a legacy monolith into microservices: phased, zero downtime, known vulnerabilities cleared along the way.',
     tags: ['kotlin', 'java', 'vert.x', 'react', 'redis', 'caching', 'oauth2', 'bff', 'github-actions', 'jenkins'],
   },
   {
