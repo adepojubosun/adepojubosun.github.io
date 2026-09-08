@@ -26,7 +26,7 @@ export const work = [
   {
     name: 'Rendezview',
     url: 'https://rendezview.app',
-    context: 'blacktagdevs · co-founder & cto',
+    context: 'blacktagdevs · product',
     body: 'Rendezview uses AI to help you plan events, with a vendor marketplace underneath. I set technical direction for a four-person team and build most of the backend, including the tiered invite system behind the beta.',
     tags: ['typescript', 'gcp', 'postgresql', 'ai-orchestration'],
   },
@@ -34,7 +34,7 @@ export const work = [
     name: 'Backroom',
     url: 'https://www.bkrm.io',
     context: 'blacktagdevs · bkrm.io',
-    body: 'A private membership community for founders, decision-makers, and changemakers. Fewer events, smaller rooms, and introductions that actually go somewhere. One of the products I build as CTO at BlackTagDevs.',
+    body: 'A private membership community for founders, decision-makers, and changemakers. Fewer events, smaller rooms, and introductions that actually go somewhere. One of the products I build at BlackTagDevs.',
     tags: ['typescript', 'railway', 'postgresql', 'stripe', 'subscriptions'],
   },
   {
