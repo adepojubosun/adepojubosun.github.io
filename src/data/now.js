@@ -1,7 +1,7 @@
 // The /now rows, in order. `draft: true` keeps a row off the site — use it
 // for rows whose value is still a placeholder.
 export const now = [
-  { key: 'building', value: 'Rendezview at BlackTagDevs' },
+  { key: 'building', value: 'Rendezview' },
   { key: 'learning', value: 'AI evals and distributed systems' },
   { key: 'creating', value: 'Writing and video content' },
   { key: 'fitness', value: 'Lifting and MMA' },
